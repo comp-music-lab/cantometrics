@@ -1,2 +1,32 @@
-# cantometrics
-This repository contains all the code used for analysis and data visualization in the ISMIR 2020 submission by Daikoku &amp; Ding. Keio University.
+# Cantometrics
+
+## Inter-Rater Reliability Scripts
+
+### Directory Structure
+
+### Dependencies
+
+### Steps to Run
+
+
+## Data Visualization
+
+### Directory Structure
+
+### Dependencies
+
+### Steps to Run
+
+
+## Automated Analysis
+
+### Directory Structure
+
+### Dependencies
+
+### Steps to Run
+
+
+## Raw Data
+
+### Directory Structure
