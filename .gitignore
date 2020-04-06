@@ -1,0 +1,3 @@
+/.vscode
+/thirdparty_data/**
+!/thirdparty_data/.gitkeep
