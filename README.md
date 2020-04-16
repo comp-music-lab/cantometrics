@@ -32,16 +32,47 @@ The dependencies are maintained by the `Pipenv` file under the `analysis` folder
 ## Data Visualization
 
 ### Directory Structure
+```
+.
+|-- map-plot.ipynb
+|-- distance_matrix_comparison.ipynb
+|-- Interpretations
+|-- figs
+|-- full-distances
+|-- partial-distances
+`-- without-track-20
+```
+
+#### Python Notebooks
+This directory contains two python notebooks. 
+
+**distance_matrix_comparson.ipynb**
+Distance Matrix Comparison creates all heatmaps, pearson correlations and mantel correlations between the varios similarity ratings (Human and automated).
+
+**map_plot.ipynb**
+This notebook creates a map based visualization of the recordings.
+
+#### Data
+1. full-distances: Full distance matrices for Cantometrics, Cantometrics without N/A values, Musly, Panteli, and Metric Learning
+2. partial-distances: Partial distance matrrices for Cantometrics, Pairwise ratings, Musly, Panteli, Triplet and individual 5x5 pairwise matrices
+
+#### MDS plots
+Look into the interpretations directory. This directory also contains song descriptions with some notes written by Lomax himself.
+
+#### Cantometrics conversions
+Converts and normalizes Lomax's ratings that vary from 3 to 13 point likert scales into a unifiorm 0 to 1 range.
+This contains the raw data from Lomax's orginial ratings.
 
 ### Dependencies
+1. Python v. 3.7
+2. Anaconda
+3. Pandas
+4. Numpy
+5. Scipy
+6. Skbio
+7. Basemap
+8. Seaborn
+9. Jupyter
 
 ### Steps to Run
-
-
-## Automated Analysis
-
-### Directory Structure
-
-### Dependencies
-
-### Steps to Run
+Once you have navigated to this directory run `jupyter notebook` and use the GUI to navigate to the notebook you wish to run. Cells can be run using Shft+Enter
