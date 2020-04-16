@@ -76,11 +76,3 @@ This contains the raw data from Lomax's orginial ratings.
 
 ### Steps to Run
 Once you have navigated to this directory run `jupyter notebook` and use the GUI to navigate to the notebook you wish to run. Cells can be run using Shft+Enter
-
-## Automated Analysis
-
-### Directory Structure
-
-### Dependencies
-
-### Steps to Run
