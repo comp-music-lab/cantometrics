@@ -156,10 +156,6 @@ write.csv(as.matrix(dist),"CantometricsDistNominal.csv")
 d1<-as.dist(as.matrix(read.csv("CantometricsDistNominal.csv",row.names=1,header=T)))
 d2<-as.dist(as.matrix(read.csv("average_pairwise_matrix.csv",header=F)))
 d2<-100-d2 #convert from similarities to distances
-
-#plot histogram
-hist(d1)
-d2<-100-d2 #convert from similarities to distances
 d2[d2 == 100] <- NA #remove values that should be NA
   
 #plot histogram
