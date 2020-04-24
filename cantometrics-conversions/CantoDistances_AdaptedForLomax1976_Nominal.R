@@ -166,7 +166,36 @@ hist(d2)
 mantel(d1,d2,na.rm=TRUE,method="pearson") 
 
 
+########
+#Sample code if helpful to manually remove data to create partial distance matrices (should probably use better code above though, as that controls for non-independence through mantel tests)
+  
+##Compare partial distance matrices 
+#Import two distance matrices
+d1<-as.dist(as.matrix(read.csv("CantometricsDist.csv",row.names=1,header=T)))
+d2<-as.dist(as.matrix(read.csv("average_pairwise_matrix.csv",header=F)))
+d2<-100-d2 #convert from similarities to distances
 
+#plot histogram
+hist(d1)
+hist(d2)
+
+#convert into data frames
+m1<-as.matrix(d1)
+xy <- t(combn(colnames(m1), 2))
+d1<-data.frame(xy, dist=m1[xy])
+d1<-unfactor(d1) #fixes ID numbers being coded as factors rather than numbers
+
+m2<-as.matrix(d2)
+xy <- t(combn(colnames(m2), 2))
+d2<-data.frame(xy, dist=m2[xy])
+d2<-unfactor(d2) #fixes ID numbers being coded as factors rather than numbers
+plot(d1$dist,d2$dist)
+
+#remove empty values from partial distance matrices
+d<-cbind(d2,d1)
+d<-subset(d,dist!=100) #for real partial distance matrices
+plot(d$dist,d$dist.1)
+cor.test(d$dist,d$dist.1,alternative="greater")
 
 
 
