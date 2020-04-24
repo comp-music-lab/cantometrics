@@ -113,7 +113,7 @@ hist(d2)
 mantel(d1,d2,na.rm=TRUE,method="pearson") 
   
 ########
-#Sample code if helpful to manually remove data to create partial distance matrices (should probably use better code though)
+#Sample code if helpful to manually remove data to create partial distance matrices (should probably use better code above though, as that controls for non-independence through mantel tests)
   
 ##Compare partial distance matrices 
 #Import two distance matrices
