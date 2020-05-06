@@ -61,9 +61,6 @@ result <- matrix_comparison(musly, panteli)
 full_comparisons$X3[4] <- result$statistic 
 full_comparisons$X4[3] <- result$signif
 
-
-full_comparisons[full_comparisons==NA] <- 0
-
 write.csv(as.matrix(full_comparisons),"./results/full_comparisons.csv")
 
 
@@ -109,6 +106,4 @@ result <- matrix_comparison(musly_partial, panteli_partial)
 partial_comparisons$X4[5] <- result$statistic 
 partial_comparisons$X5[4] <- result$signif
 
-
-partial_comparisons[partial_comparisons==NA] <- 0
 write.csv(as.matrix(partial_comparisons),"./results/partial_comparisons.csv")
